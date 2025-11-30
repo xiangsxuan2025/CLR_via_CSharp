@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search - CLR via C#</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles/vs.css">
+    <link rel="stylesheet" href="css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="index.htm"><i class="fa fa-home"></i> CLR via C#</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="README.htm">Home</a>
+</li>
+
+<li class="tocentry"><a href="ch000introduction.htm">ch000introduction.md</a>
+</li>
+<li class="tocentry"><a href="ch00foreword.htm">ch00foreword.md</a>
+</li>
+<li class="tocentry"><a href="ch01_TheCLRSExecutionMode.htm">ch01_TheCLRSExecutionMode.md</a>
+</li>
+<li class="tocentry"><a href="ch02_Building.htm">ch02_Building.md</a>
+</li>
+<li class="tocentry"><a href="ch03_SharedAssemblies.htm">ch03_SharedAssemblies.md</a>
+</li>
+<li class="tocentry"><a href="ch04_TypeFundamentals.htm">ch04_TypeFundamentals.md</a>
+</li>
+<li class="tocentry"><a href="ch05_PrimitiveRefValType.htm">ch05_PrimitiveRefValType.md</a>
+</li>
+<li class="tocentry"><a href="ch06_TypeAndMemberBasics.htm">ch06_TypeAndMemberBasics.md</a>
+</li>
+<li class="tocentry"><a href="ch07_ConstantsAndFields.htm">ch07_ConstantsAndFields.md</a>
+</li>
+<li class="tocentry"><a href="ch08_Methods.htm">ch08_Methods.md</a>
+</li>
+<li class="tocentry"><a href="ch09_Parameters.htm">ch09_Parameters.md</a>
+</li>
+<li class="tocentry"><a href="ch10_Properties.htm">ch10_Properties.md</a>
+</li>
+<li class="tocentry"><a href="ch11_Events.htm">ch11_Events.md</a>
+</li>
+<li class="tocentry"><a href="ch12_Generics.htm">ch12_Generics.md</a>
+</li>
+<li class="tocentry"><a href="ch13_Interfaces.htm">ch13_Interfaces.md</a>
+</li>
+<li class="tocentry"><a href="ch14_CharStringText.htm">ch14_CharStringText.md</a>
+</li>
+<li class="tocentry"><a href="ch15_EnumeratedTypes.htm">ch15_EnumeratedTypes.md</a>
+</li>
+<li class="tocentry"><a href="ch16_Arrays.htm">ch16_Arrays.md</a>
+</li>
+<li class="tocentry"><a href="ch17_Delegates.htm">ch17_Delegates.md</a>
+</li>
+<li class="tocentry"><a href="ch18_CustomAttributes.htm">ch18_CustomAttributes.md</a>
+</li>
+<li class="tocentry"><a href="ch19_NullableValueTypes.htm">ch19_NullableValueTypes.md</a>
+</li>
+<li class="tocentry"><a href="ch20_ExceptionsAndStateManae.htm">ch20_ExceptionsAndStateManae.md</a>
+</li>
+<li class="tocentry"><a href="ch21_ManagedHeapGarbage.htm">ch21_ManagedHeapGarbage.md</a>
+</li>
+<li class="tocentry"><a href="ch22_CLRHostingAndAppDomain.htm">ch22_CLRHostingAndAppDomain.md</a>
+</li>
+<li class="tocentry"><a href="ch23_AssemblyLoaingReflection.htm">ch23_AssemblyLoaingReflection.md</a>
+</li>
+<li class="tocentry"><a href="ch24_RuntimeSerialization.htm">ch24_RuntimeSerialization.md</a>
+</li>
+<li class="tocentry"><a href="ch25_WinRTComponents.htm">ch25_WinRTComponents.md</a>
+</li>
+<li class="tocentry"><a href="ch26_ThreadBasics.htm">ch26_ThreadBasics.md</a>
+</li>
+<li class="tocentry"><a href="ch27_ComputeBoundAsync.htm">ch27_ComputeBoundAsync.md</a>
+</li>
+<li class="tocentry"><a href="ch28_IOBoundAsyncOperations.htm">ch28_IOBoundAsyncOperations.md</a>
+</li>
+<li class="tocentry"><a href="ch29_PrimitiveThreadSyncConstructs.htm">ch29_PrimitiveThreadSyncConstructs.md</a>
+</li>
+<li class="tocentry"><a href="ch30_hybridThreadSyncConst.htm">ch30_hybridThreadSyncConst.md</a>
+</li>
+<li class="tocentry"><a href="Postscript.htm">Postscript.md</a>
+</li>
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="index.htm">CLR via C#</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="README.htm">Home</a></li> / <li><a href="Docnet_search.htm">Search</a></li></ul>
+					
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+
+					<h1 id="search">Search Results</h1>
+					<p>
+					<form id="content_search" action="Docnet_search.htm">
+						<span role= "status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+						<input name="q" id="search-query" type="text" class="search_input search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off" autofocus/>
+					</form>
+					</p>
+					<div id="search-results">
+					<p>Sorry, page not found.</p>
+					</div>
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+https://github.com/xiangsxuan2025
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/modernizr-2.8.3.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script src="js/theme.js"></script>
+
+	<script>var base_url = '.';</script>
+	<script data-main="js/search.js" src="js/require.js"></script>
+</body>
+</html>
