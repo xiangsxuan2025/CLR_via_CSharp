@@ -174,7 +174,7 @@ private void ReadData(String pathname) {
 
 我个人认为，C# 团队应该为异常处理机制选择一套不同的语言关键字。程序员想做的是尝试(`try`)执行一些代码。如果发生错误，要么处理(`handle`)错误，以便从错误中恢复并继续；要么进行补偿(`compensate`)来撤消一些状态更改，并向调用者上报错误。程序员还希望确保清楚操作(`cleanup`)无论如何都会发生。左边的代码是目前 C# 编译器所支持的方法，右边的是我推荐的可读性更佳的方式：
 
-![20_0](../resources/images/20_0.png)  
+![20_0](./resources/images/20_0.png)  
 
 > CLS 和非 CLS异常  
 > 所有面向 CLR 的编程语言都必须支持抛出从 `Exception` 派生的对象，因为公共语言规范(Common Language Specification, CLS)对此进行了硬性规定。但是，CLR 实际允许抛出任何类型的实例，而且有些编程语言允许代码抛出非 CLS 相容的异常对象，比如一个 `String`，`Int32` 和 `DateTime` 等。C# 编译器只允许代码抛出从 `Exception` 派生的对象，而用其他一些语言写的代码不仅允许抛出 `Exception`派生对象，还允许抛出非 `Exception` 派生对象。
@@ -435,7 +435,7 @@ Microsoft 本来是打算将 `System.Exception` 类型作为所有异常的基�
 
 强烈建议定义浅而宽的异常类型层次结构<sup>①</sup>，以创建尽量少的基类。原因是基类的主要作用就是将大量错误当作一个错误，而这通常是危险的。基于同样的考虑，永远都不要抛出一个`System.Exception` 对象<sup>②</sup>，抛出其他任何基类异常类型时也要特别谨慎。
 
-> ① ![20_00](../resources/images/20_00.png)= 浅而宽； ![20_000](../resources/images/20_000.png)= 深而窄。 ——— 译注
+> ① ![20_00](./resources/images/20_00.png)= 浅而宽； ![20_000](./resources/images/20_000.png)= 深而窄。 ——— 译注
 
 > ② 事实上，Microsoft 本来就应该将 `System.Exception` 类标记为 `abstract`，在编译时就禁止代码试图抛出它(的实例)。
 
@@ -548,7 +548,7 @@ public static void TestException() {
 
 > 注意 我的 `Exception<TExceptionArgs>` 类有两个问题需要注意。第一个问题是，用它定义的任何异常类型都总是派生自 `System.Exception`。这在大多数时候都不是问题，而且浅而宽的异常类型层次结构还是一件好事。第二个问题是，Visual Studio 的未处理异常对话框不会显示 `Exception<T>`类型的泛型类型参数，如下图所示。
 
-![20_0_0](../resources/images/20_0_0.png)  
+![20_0_0](./resources/images/20_0_0.png)  
 
 ## <a name="20_7">20.7 用可靠性换取开发效率</a>
 
@@ -1037,19 +1037,19 @@ private static void Reflection(Object o) {
 
 类库开发人员压根儿用不着去想未处理的异常。只有应用程序的开发人员才需关心未处理的异常。而且应用程序应建立处理未处理异常的策略。Microsoft 建议应用程序开发人员接受 CLR 的默认策略。也就是说，应用程序发生未处理的异常时，Windows 会向事件日志写一条记录。为了查看该记录，可打开“事件查看器”应用程序，然后打开树结构中的“Windows日志”->“应用程序”节点，如图 20-1 所示。
 
-![20_1](../resources/images/20_1.png)  
+![20_1](./resources/images/20_1.png)  
 
 图 20-1 Windows 事件日志显示应用程序因为未处理的异常而终止
 
 然而，还可以通过“Windows 操作中心”来获取更有趣的细节。为了启动操作中心，请单击系统托盘中的小旗，选择“打开操作中心”。然后，请展开“维护”，单击“查看可靠性历史记录”链接。随后，会在底部的窗格看到应用程序由于未处理的异常而终止，如图 20-2 所示。
 
-![20_2](../resources/images/20_2.png)  
+![20_2](./resources/images/20_2.png)  
 
 图 20-2 “可靠性监视程序” 显示引用程序由于未处理的异常而终止
 
 要查看已终止的应用程序的更多细节，请在“可靠性监视程序”中双击终止的应用程序。图 20-3 显示了这些细节，各个“问题签名”的含义在表 20-2 中进行了总结。托管应用程序生成的所有未处理的异常都放在 CLR20r3 这个存储段(bucket)中。
 
-![20_3](../resources/images/20_3.png)  
+![20_3](./resources/images/20_3.png)  
 
 图 20-3 “可靠性监视程序”显示了与出错应用程序有关的更多细节
 
@@ -1113,19 +1113,19 @@ EXCEPTION_PRIV_INSTRUCTION STATUS_UNWIND_CONSOLIDATE.
 
 Visual Studio 调试器为异常提供了特殊支持。在当前已打开一个解决方案的前提下，请从“调试”菜单选择“异常”，随后会看到如图 20-4 所示的对话框。
 
-![20_4](../resources/images/20_4.png)   
+![20_4](./resources/images/20_4.png)   
 
 图 20-4 “异常设置”对话框显示了不同种类的异常 
 
 这个对话框显示了 Visual Studio 能识别的不同种类的异常。展开 Common Language Runtime Exceptions，会看到 Visual Studio 调试器能识别的命名空间集，如图 20-5 所示。
 
-![20_5](../resources/images/20_5.png)  
+![20_5](./resources/images/20_5.png)  
 
 图 20-5 按命名空间划分的各种 CLR 异常
 
 展开一个命名空间，会看到在该命名空间中定义的所有 `System.Exception` 派生类型。例如，图 20-6 展示的是 `System` 命名空间中的CLR 异常。
 
-![20_6](../resources/images/20_6.png)  
+![20_6](./resources/images/20_6.png)  
 
 图 20-6 “异常”对话框，显示`System` 命名空间中定义的 CLR 异常
 
@@ -1135,7 +1135,7 @@ Visual Studio 调试器为异常提供了特殊支持。在当前已打开一个
 
 如果定义了自己的异常类型，可单击“添加”把它们添加到这个对话框中。这会打开如图 20-7 所示的对话框。
 
-![20_7](../resources/images/20_7.png)  
+![20_7](./resources/images/20_7.png)  
 
 图 20-7 让 Visual Studio 识别你自己的异常类型：“新异常”对话框
 
@@ -1165,7 +1165,7 @@ Visual Studio 调试器为异常提供了特殊支持。在当前已打开一个
 
 如果希望了解异常处理对代码性能的影响，可使用 Windows 自带的 “性能监视器”。图 20-8 展示了随同 .NET Framework 安装的与异常有关的计数器。
 
-![20_8](../resources/images/20_8.png)  
+![20_8](./resources/images/20_8.png)  
 
 图 20-8  性能监视器显示了 .NET CLR Exceptions 计数器
 
@@ -1380,7 +1380,7 @@ public static class Contract {
 
 协定默认只作为文档使用，因为生成项目时没有定义 `CONTRACTS_FULL` 符号。为了发掘协定的附加价值，必须下载额外的工具和一个 Visual Studio 属性窗格，网址是 `http://msdn.microsoft.com/en-us/devlabs/dd491992.aspx`。Visual Studio之所以不包含所有代码协定工具，是因为该技术和增强的速度比 Visual Studio 本身快得多。下载和安装好额外的工具之后，会看到项目有一个新的属性窗格，如图 20-9 所示。
 
-![20_9](../resources/images/20_9.png)  
+![20_9](./resources/images/20_9.png)  
 图 20-9 一个 Visual Studio 项目的 Code Contracts 窗格  
 
 启用代码协定功能要勾选 Perform Runtime Contract Checking，并从旁边的组合框中选择 Full。这样就会在生成项目时定义 `CONTRACTS_FULL` 符号，并在项目生成之后调用恰当的工具(稍后详述)。然后，运行时违反协定会引发`Contract`的`ContractFailed`事件。一般情况下，开发人员不向这个事件登记任何方法。但如果登记了方法，你登记的任何方法都会接收到一个 `ContractFailedEventArgs` 对象，它看起来像下面这样：

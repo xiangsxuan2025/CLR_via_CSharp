@@ -33,7 +33,7 @@ myControls = new Control[50];       // 创建含有 50 个 Control 引用的数�
 
 图 16-1 展示了值类型的数组和引用类型的数组在托管堆中的情况。
 
-![16_1](../resources/images/16_1.png)  
+![16_1](./resources/images/16_1.png)  
 
 图 16-1 值类型和引用类型的数组在托管堆中的情况
 
@@ -606,4 +606,3 @@ internal unsafe struct CharArray {
 * 数组的元素类型必须是以下类型之一：`Boolean`，`Char`，`SByte`，`Byte`，`Int16`，`Int32`，`UInt16`，`UInt32`，`Int64`，`Single`或`Double`。
 
 要和非托管代码进行互操作，而且非托管数据结构也有一个内联数组，就特别适合使用内联的数组。但内联数组也能用于其他地方。上述代码中的 `InlineArrayDemo` 方法提供了如何使用内联数组的一个例子。它执行和 `StackallocDemo` 方法一样的功能，只是用了不一样的方式。
- 
