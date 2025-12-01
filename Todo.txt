@@ -1,0 +1,6 @@
+gh-page分支的静态网站, 图片不能显示
+
+两种解决方案: 
+1. [确定可行]需要用类似下面的链接, 可以让md转换为web时, 自动把图片加上如下前缀
+https://raw.githubusercontent.com/xiangsxuan2025/CLR_via_CSharp/main/chapters/resources/images/10_1.png
+2. [不确定可行性]图片文件资源在gh-page分支放一份, 相对路径访问
