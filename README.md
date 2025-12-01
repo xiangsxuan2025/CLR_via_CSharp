@@ -3,8 +3,8 @@
 [静态站点](https://xiangsxuan2025.github.io/CLR_via_CSharp)
 
 
-[前言](./chapters/ch000foreword.md)  
-[序言](./chapters/ch00introduction.md)
+[前言](./chapters/ch000_foreword.md)  
+[序言](./chapters/ch00_introduction.md)
 
 ---
 第一部分 CLR 基础  
