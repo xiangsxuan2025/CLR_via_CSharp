@@ -1,6 +1,6 @@
 # CLR Via C# 第四版 (美) Jeffrey Richter 著 周靖
 
-[静态站点](https://xiangsxuan2025.github.io/CLR_via_CSharp)
+[静态站点](https://xiangsxuan2.github.io/CLR_via_CSharp)
 
 
 [前言](./chapters/ch000_foreword.md)  
